@@ -1,30 +1,4 @@
-"""
-VT_HashQuery.py
-
-Description:
-This script scans all TXT and PDF files in a specified '.INPUT' directory, extracts unique hash strings (MD5, SHA1, SHA256), 
-and queries VirusTotal (VT) for each hash using a provided API key. Due to VirusTotal's free tier rate limit, 
-the script processes up to 4 hash queries every 65 seconds. 
-
-The script outputs two result files in a newly created timestamped folder within the '.OUTPUT' directory:
-1. VT_RESULTS_<timestamp>.TXT - A concise summary of VirusTotal verdicts for each hash, including how often 
-   each hash appeared in the input files and a brief tally of detection results (e.g., malicious, undetected).
-2. VERBOSE_VT_RESULTS_<timestamp>.TXT - A more detailed output, including the full VirusTotal response or 
-   error messages for each hash.
-
-Features:
-- Processes all TXT and PDF files in the '.INPUT' folder, extracting and counting hash occurrences.
-- Queries VirusTotal while handling API rate limits and errors gracefully.
-- Summarizes VirusTotal results with a tally of detection verdicts.
-- Saves both concise and verbose output files in an organized timestamped subfolder.
-
-Usage:
-- Place your TXT and PDF files in the '.INPUT' directory.
-- Run the script, and the results will be saved in the '.OUTPUT' directory.
-- Ensure you have a valid VirusTotal API key before running the script.
-
-Note: This script requires the 'PyPDF2' and 'requests' libraries.
-"""
+# WIP
 
 import os
 import re
@@ -153,3 +127,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
